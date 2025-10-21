@@ -1,0 +1,61 @@
+meta {
+  name: submitWaybill
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://adpdemo.pperfect.com/ppintegrationservice/v30/Json/
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  method: submitWaybill
+  class: waybill
+  params: '''
+    {
+    "details":{
+    "service":"RFX",
+    "origpers":"KLEIN KAROO AGRI PTY LTD",
+    "origperadd1":"FIRST AVE",
+    "origperadd2":".",
+    "origperadd3":"DE RUST",
+    "origperadd4":"",
+    "origtown":"",
+    "origperpcode":"6650",
+    "origpercontact":"HELGA SMIT",
+    "origperphone":"0442035100",
+    "origpercell":"",
+    "origperemail":"kkk@pixle.co.za",
+    "bookstarttime":"08:00",
+    "bookendtime":"17:00",
+    "bookdate":"16.10.2025",
+    "destpers":"ACS Embrace_AG10_Systems_ACS",
+    "destperphone":"",
+    "destpercell":"",
+    "destperemail":"",
+    "destperadd1":"Emerald Road",
+    "destperadd2":"Bellville Industrial Park",
+    "destperadd4":"",
+    "desttown":"",
+    "destperpcode":"",
+    "isCollection":1,
+    "starttime":"09:00",
+    "endtime":"16:00",
+    "waydate":"16.10.2025",
+    "specinstruction":"BROKEN WHEN ARRIVED"
+    },
+    "wayrefs":[{
+    "reference":"CLM2076256"
+    }],
+    "ttype":"A"
+    }
+  '''
+  token_id: 136f4ee6e97f525ae27316891a025d054029a809
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
