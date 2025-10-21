@@ -1,0 +1,15 @@
+meta {
+  name: Purchase Order Post LIVE
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://agrvs02.agrinet.local/agrinet.live/slimstock/purchasing/order
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
