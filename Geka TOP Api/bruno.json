@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Geka TOP Api",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

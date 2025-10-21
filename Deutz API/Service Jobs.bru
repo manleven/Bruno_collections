@@ -1,0 +1,25 @@
+meta {
+  name: Service Jobs
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://ddperp.hq.deutz-embrace.co.za:8282/deutz.live/transactions/service/jobs/general?Extend=ServiceJobs.UserField2&ServiceJob=F09000027
+  body: none
+  auth: basic
+}
+
+params:query {
+  Extend: ServiceJobs.UserField2
+  ServiceJob: F09000027
+}
+
+auth:basic {
+  username: {{x_o_u}}
+  password: {{x_o_p}}
+}
+
+settings {
+  encodeUrl: true
+}

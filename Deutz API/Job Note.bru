@@ -1,0 +1,20 @@
+meta {
+  name: Job Note
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://ddperp.hq.deutz-embrace.co.za:8282/deutz.fs.test/transactions/service/job/note
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{x_o_u}}
+  password: {{x_o_p}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: Template Upload
+  type: http
+  seq: 16
+}
+
+post {
+  url: https://preprod-3pe-portal.dpworld.com/api/v1/file/upload?feature=TEMPLATE_RECOMMENDATION&buId=GEKAPHARMA&uploadedBy=mannie
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  feature: TEMPLATE_RECOMMENDATION
+  buId: GEKAPHARMA
+  uploadedBy: mannie
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/acs/Documents/GEKA/RecomendedTemplateUpload.xlsx)
+}
+
+settings {
+  encodeUrl: true
+}

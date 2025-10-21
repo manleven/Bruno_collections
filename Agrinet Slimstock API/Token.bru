@@ -1,0 +1,21 @@
+meta {
+  name: Token
+  type: http
+  seq: 4
+}
+
+post {
+  url: https://slim4agrinet.senwes.co.za/ext/token
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  grant_type: client_credentials
+  client_id: {{client_id}}
+  client_secret: {{client_secret}}
+}
+
+settings {
+  encodeUrl: true
+}

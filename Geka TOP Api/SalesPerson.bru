@@ -1,0 +1,35 @@
+meta {
+  name: SalesPerson
+  type: http
+  seq: 1
+}
+
+patch {
+  url: https://ecom-3pe-nonprod.dpworld.com/3pe-portal-preprod/api/v1/sales-persons?buId=GEKAPHARMA&salesPersonId=1
+  body: json
+  auth: inherit
+}
+
+params:query {
+  buId: GEKAPHARMA
+  salesPersonId: 1
+}
+
+headers {
+  Ocp-Apim-Subscription-Key: {{OcpApimSubscription}}
+}
+
+body:json {
+  {
+      "firstName": "COD SALES REP",
+      "lastName": "",
+      "Email": "enquiries@geka.com.na",
+      "countryCode": "NA",
+      "Phone": "+264 83 292 6000",
+      "Active": "false" 
+    }
+}
+
+settings {
+  encodeUrl: true
+}

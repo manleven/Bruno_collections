@@ -1,0 +1,23 @@
+meta {
+  name: Products
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://ecom-3pe-nonprod.dpworld.com/3pe-portal-preprod/api/v1/products?buId=GEKAPHARMA
+  body: json
+  auth: inherit
+}
+
+params:query {
+  buId: GEKAPHARMA
+}
+
+headers {
+  Ocp-Apim-Subscription-Key: {{OcpApimSubscription}}
+}
+
+settings {
+  encodeUrl: true
+}

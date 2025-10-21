@@ -1,0 +1,30 @@
+meta {
+  name: Document Upload
+  type: http
+  seq: 15
+}
+
+post {
+  url: https://ecom-sfs-nonprod.dpworld.com/oms-preprod/dpw-oms-service/v1/files/upload-document-details
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Ocp-Apim-Subscription-Key: 76f7252f6bb24f18aeb784932419559f
+  X-TENANT-ID: GEKAPHARMA
+  X-BU-ID: GEKAPHARMA
+}
+
+body:multipart-form {
+  file: @file(/C:/Users/acs/Documents/Embrace/Embrace Downloads/18716794-2.pdf)
+  ownerType: ORDER
+  ownerId: OMS-10000308632
+  documentName: 18716794-2.pdf
+  documentCategory: INVOICE
+  ~business: GEKAPHARMA
+}
+
+settings {
+  encodeUrl: true
+}

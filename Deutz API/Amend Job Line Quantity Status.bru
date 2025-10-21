@@ -1,0 +1,39 @@
+meta {
+  name: Amend Job Line Quantity Status
+  type: http
+  seq: 4
+}
+
+patch {
+  url: https://acs-embrace.com:8282/deutz.test.15.3/transactions/service/job/quantity/status
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{username}}
+  password: {{password}}
+}
+
+body:json {
+  {
+  	"EndUserId":	"serv",
+  	"ServiceCentre":	"F01",
+  	"ServiceJobNumber":	"F01000049",
+  	"FaultDescription":	"FIXED PRICE COMM ATLAS COPCO JET PARK",
+  	"ReferenceType":	"P",
+  	"PartNumber":	"01144635",
+  	"QUANTITYSTATUS":	{
+  		"PickQuantity":	0,
+  		"IssueQuantity":	5,
+  		"CommitQuantity":	0,
+  		"BackorderQuantity":	0,
+  		"CancelQuantity":	0,
+  		"NoneQuantity":	0
+  	}
+  }
+}
+
+settings {
+  encodeUrl: true
+}

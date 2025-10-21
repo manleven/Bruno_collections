@@ -1,0 +1,41 @@
+meta {
+  name: Credit History
+  type: http
+  seq: 18
+}
+
+post {
+  url: https://ecom-3pe-nonprod.dpworld.com/3pe-portal-preprod/api/v1/credit-history?buId=GEKAPHARMA
+  body: json
+  auth: inherit
+}
+
+params:query {
+  buId: GEKAPHARMA
+}
+
+headers {
+  Ocp-Apim-Subscription-Key: {{OcpApimSubscription}}
+}
+
+body:json {
+  [
+      {
+          "customerAccountId": "Test",
+          "transactionDate": "2024-05-07",
+          "transactionType": "DEBIT",
+          "transactionNumber": "trans-003-test",
+          "rmaNumber": "rma-003-test",
+          "referenceNumber": "ref-003-test",
+          "creditMemoDescription": "credit memo desc 3",
+          "deliveryNumber": "del-003",
+          "debit": 100,
+          "credit": 0,
+          "runningBalance": 1400
+      }
+  ]
+}
+
+settings {
+  encodeUrl: true
+}

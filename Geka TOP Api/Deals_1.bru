@@ -1,0 +1,20 @@
+meta {
+  name: Deals_1
+  type: http
+  seq: 5
+}
+
+get {
+  url: https://acsembrace.geka.com.na:8282/GEKA.TEST/v1/deals
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{usrename}}
+  password: {{password}}
+}
+
+settings {
+  encodeUrl: true
+}

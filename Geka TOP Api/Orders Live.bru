@@ -1,0 +1,104 @@
+meta {
+  name: Orders Live
+  type: http
+  seq: 8
+}
+
+post {
+  url: https://acsembrace.geka.com.na:8282/geka.live/v1/orders
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{usrename}}
+  password: {{password}}
+}
+
+body:json {
+  {
+      "dpwOrderNo": "OMS-10000333971",
+      "createdBy": "LANGERHANS PHARMACY",
+      "orderDate": "2025-06-11T08:18:59Z",
+      "customerAccountId": "1000014",
+      "totalCost": 1684.01,
+      "totalBase": 1464.36,
+      "totalTax": 219.65,
+      "orderLevelDiscount": 148.28,
+      "totalLineLevelDiscount": 9.72,
+      "netTotalDiscount": 158.0,
+      "totalSellingPrice": 1684.01,
+      "orderLevelDealId": [
+          "DISCOUNT"
+      ],
+      "lineItem": [
+          {
+              "productId": "029546",
+              "productName": "AK47 PREMIUM TABLETS 4 LIBIDO BOOSTER",
+              "quantity": 12.0,
+              "uom": "EA",
+              "cost": 36.730000000000004,
+              "base": 31.94,
+              "tax": 4.79,
+              "discount": 7.99,
+              "sellingPrice": 36.730000000000004,
+              "currency": "NAD",
+              "dealId": "DISCOUNT"
+          },
+          {
+              "productId": "029433",
+              "productName": "ANACONDA BALM 25ML ",
+              "quantity": 36.0,
+              "uom": "EA",
+              "cost": 14.56,
+              "base": 12.66,
+              "tax": 1.9,
+              "discount": 1.73,
+              "sellingPrice": 14.56,
+              "currency": "NAD",
+              "dealId": "DISCOUNT"
+          },
+          {
+              "productId": "003285",
+              "productName": "EVOREL CONTI PATCHES 8 OESTRADIOL NORETHISTERONE",
+              "quantity": 1.0,
+              "uom": "EA",
+              "cost": 462.01,
+              "base": 401.75,
+              "tax": 60.26,
+              "discount": 0.0,
+              "sellingPrice": 462.01,
+              "currency": "NAD"
+          },
+          {
+              "productId": "025711",
+              "productName": "NAVIBLEF INTENSIVE CARE EYE LID FOAM 50ML TEA TREE OIL 1%",
+              "quantity": 1.0,
+              "uom": "EA",
+              "cost": 130.11,
+              "base": 113.14,
+              "tax": 16.97,
+              "discount": 0.0,
+              "sellingPrice": 130.11,
+              "currency": "NAD"
+          },
+          {
+              "productId": "006798",
+              "productName": "RENU MULTIPURPOSE SENSITIVE 360ML CONTACT LENS SOLUTION",
+              "quantity": 1.0,
+              "uom": "EA",
+              "cost": 126.80000000000001,
+              "base": 110.26,
+              "tax": 16.54,
+              "discount": 0.0,
+              "sellingPrice": 126.80000000000001,
+              "currency": "NAD"
+          }
+      ]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

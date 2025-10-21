@@ -1,0 +1,25 @@
+meta {
+  name: Inventory
+  type: http
+  seq: 21
+}
+
+get {
+  url: https://acsembrace.geka.com.na:8282/geka.test/masterdata/inventory?Product=039389&Extend=ALL
+  body: none
+  auth: basic
+}
+
+params:query {
+  Product: 039389
+  Extend: ALL
+}
+
+auth:basic {
+  username: {{anniqueuser}}
+  password: {{anniguepass}}
+}
+
+settings {
+  encodeUrl: true
+}

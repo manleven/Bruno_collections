@@ -1,0 +1,29 @@
+meta {
+  name: Template Upload Live
+  type: http
+  seq: 17
+}
+
+post {
+  url: https://ecom-3pe.dpworld.com/3pe-portal/api/v1/file/upload?feature=RESTRICTED_ACCESS&buId=GEKAPHARMA&uploadedBy=mannie
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  feature: RESTRICTED_ACCESS
+  buId: GEKAPHARMA
+  uploadedBy: mannie
+}
+
+headers {
+  Ocp-Apim-Subscription-Key: 276e2c4c736b4761b46707abfda5dc4b
+}
+
+body:multipart-form {
+  file: @file()
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,39 @@
+meta {
+  name: Users
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://www.abes.joburg:8282/abes.test.15.3/masterdata/configuration/users?StartBranch=JJ01&EndBranch=JJ06&UserGroup=ACS&Division=AS&User=johann&StartUser=angela&EndUser=william&ChangedAfterDate=2021-05-10&ChangedAfterTime=00%3A00%3A00&Filter=SAMPLE%205&Extend=ALL
+  body: none
+  auth: basic
+}
+
+params:query {
+  StartBranch: JJ01
+  EndBranch: JJ06
+  UserGroup: ACS
+  Division: AS
+  User: johann
+  StartUser: angela
+  EndUser: william
+  ChangedAfterDate: 2021-05-10
+  ChangedAfterTime: 00%3A00%3A00
+  Filter: SAMPLE%205
+  Extend: ALL
+}
+
+headers {
+  accept: application/json
+  Authorization: 
+}
+
+auth:basic {
+  username: acs
+  password: MkYyRTJGMzIyQTJEMzQzMDJBNUY1QjcxMTkxQTE5MzUzODM3MzQzODMxMzMzMDM3MzIzODMyMzczNjM3/mFjcw==
+}
+
+settings {
+  encodeUrl: true
+}

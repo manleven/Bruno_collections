@@ -1,0 +1,44 @@
+meta {
+  name: DealUpdate
+  type: http
+  seq: 4
+}
+
+patch {
+  url: https://ecom-3pe-nonprod.dpworld.com/3pe-portal-preprod/api/deal/{dealId}?buId=GEKAPHARMA
+  body: json
+  auth: inherit
+}
+
+params:query {
+  buId: GEKAPHARMA
+}
+
+headers {
+  Ocp-Apim-Subscription-Key: {{OcpApimSubscription}}
+}
+
+body:json {
+      {
+          "dealId": "000007_3_5",
+          "buId": "GEKAPHARMA",
+          "productId": "000007",
+          "customerAccountId": null,
+          "dealType": "PROMOTIONAL",
+          "dealCategory": "PRODUCT",
+          "discountPercent": 5,
+          "discountPrice": null,
+          "active": "true",
+          "minimumPurchaseQuantity": 3,
+          "maximumPurchaseQuantity": 5,
+          "focId": null,
+          "focQuantity": null,
+          "frequency": null,
+          "expiryDate": null,
+          "createdBy": "GEKA.TEST"
+      }
+}
+
+settings {
+  encodeUrl: true
+}

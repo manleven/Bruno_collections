@@ -1,0 +1,71 @@
+meta {
+  name: Orders
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://acsembrace.geka.com.na:8282/geka.test/v1/orders
+  body: json
+  auth: basic
+}
+
+auth:basic {
+  username: {{usrename}}
+  password: {{password}}
+}
+
+body:json {
+  {
+      "orders": [
+          {
+              "dpwOrderNo": "OMS-10000155425",
+              "createdBy": "RUNDU PHARMACY (IPEN CC T/A)",
+              "orderDate": "2025-02-04T06:22:10Z",
+              "customerAccountId": "1000028",
+              "totalCost": 761.5200000000001,
+              "totalBase": 662.19,
+              "totalTax": 99.33,
+              "orderLevelDiscount": 54.46000000000001,
+              "totalLineLevelDiscount": 24.47,
+              "netTotalDiscount": 78.93,
+              "totalSellingPrice": 761.52,
+              "orderLevelDealId": [
+                  "DISCOUNT"
+              ],
+              "lineItem": [
+                  {
+                      "productId": "002949",
+                      "productName": "ACC 200MG EFF TABS 25 ",
+                      "quantity": 5,
+                      "uom": "EA",
+                      "cost": 1003.5,
+                      "base": 990,
+                      "tax": 13.5,
+                      "discount": 10,
+                      "sellingPrice": 993.5,
+                      "currency": "NAD",
+                      "dealId": "DISCOUNT"
+                  },
+                  {
+                      "productId": "010319",
+                      "productName": "CLACEE 250MG TABS 10 ",
+                      "quantity": 2,
+                      "uom": "EA",
+                      "cost": 546.38,
+                      "base": 530.47,
+                      "tax": 15.91,
+                      "discount": 14.47,
+                      "sellingPrice": 531.91,
+                      "currency": "NAD",
+                      "dealId": "DISCOUNT"
+                  }
+              ]
+          }
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+}

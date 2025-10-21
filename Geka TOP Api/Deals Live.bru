@@ -1,0 +1,20 @@
+meta {
+  name: Deals Live
+  type: http
+  seq: 6
+}
+
+get {
+  url: https://acsembrace.geka.com.na:8282/GEKA.LIVE/v1/deals
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{usrename}}
+  password: {{password}}
+}
+
+settings {
+  encodeUrl: true
+}

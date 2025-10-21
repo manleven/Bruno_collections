@@ -1,0 +1,20 @@
+meta {
+  name: Products Live
+  type: http
+  seq: 10
+}
+
+get {
+  url: https://acsembrace.geka.com.na:8282/GEKA.LIVE/api/v1/products
+  body: none
+  auth: basic
+}
+
+auth:basic {
+  username: {{usrename}}
+  password: {{password}}
+}
+
+settings {
+  encodeUrl: true
+}

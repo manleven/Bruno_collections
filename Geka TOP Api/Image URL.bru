@@ -1,0 +1,24 @@
+meta {
+  name: Image URL
+  type: http
+  seq: 13
+}
+
+post {
+  url: https://ecom-sfs-nonprod.dpworld.com/ims-preprod/api/ims/v1/3pe-products/image-upload
+  body: multipartForm
+  auth: inherit
+}
+
+headers {
+  Ocp-Apim-Subscription-Key: 76f7252f6bb24f18aeb784932419559f
+}
+
+body:multipart-form {
+  business: GEKAPHARMA
+  images: @file(/C:/Users/acs/Documents/Embrace/Embrace Downloads/000319.jpg)
+}
+
+settings {
+  encodeUrl: true
+}

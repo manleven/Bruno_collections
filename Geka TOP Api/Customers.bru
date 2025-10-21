@@ -1,0 +1,24 @@
+meta {
+  name: Customers
+  type: http
+  seq: 20
+}
+
+get {
+  url: https://acsembrace.geka.com.na:8282/geka.test/masterdata/customers/general?Filter=SAMPLE 5
+  body: none
+  auth: basic
+}
+
+params:query {
+  Filter: SAMPLE 5
+}
+
+auth:basic {
+  username: {{anniqueuser}}
+  password: {{anniguepass}}
+}
+
+settings {
+  encodeUrl: true
+}

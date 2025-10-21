@@ -1,0 +1,27 @@
+meta {
+  name: Inventory
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://abes.joburg:8282/abes.live/masterdata/inventory?Branch=AB10&Limit=10&Offset=1&Filter=SAMPLE%205
+  body: none
+  auth: inherit
+}
+
+params:query {
+  Branch: AB10
+  Limit: 10
+  Offset: 1
+  Filter: SAMPLE%205
+}
+
+headers {
+  accept: application/json
+  Authorization: Basic dHJhZGVmZWQ6TXpBeU9ESkJNekV5UWpKRU16UXpNREpHTnpFMk1EWXpOa0kyTnpWQk16VXpPRE0zTXpRek9ETXhNek16TURNM016SXpPRE15TXpjek5qTTMvbk5vWlhKdFlXND0=
+}
+
+settings {
+  encodeUrl: true
+}

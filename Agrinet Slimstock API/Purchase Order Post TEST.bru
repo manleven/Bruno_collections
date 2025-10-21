@@ -1,0 +1,19 @@
+meta {
+  name: Purchase Order Post TEST
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://agrvs02.agrinet.local/agrinet.test/slimstock/purchasing/order
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"orders":[{"quantity":25,"supplier":"069841","itemNo":"LZZ6004A","warehouse":"1001","supplierPrice":"5.500","deliveryDate":"","buyerCode":"TMP"}]}
+}
+
+settings {
+  encodeUrl: true
+}
